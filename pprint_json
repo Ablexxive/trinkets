@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+""" Simple tool for pretty printing JSON to the terminal. """
+
+import os
+import sys
+import json
+import pprint
+
+if __name__ == '__main__':
+    file_name = sys.argv[1]
+
+    path = os.path.abspath(file_name)
+    with open(path, 'r') as data:
+        out = json.load(data)
+    print(pprint.pformat(out))
