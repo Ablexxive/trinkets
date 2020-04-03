@@ -1,0 +1,4 @@
+Some useful bash commands - 
+
+# Uses ag to serach for a term and then list the filenames only, then uses sed to do a serach and replace
+ag -l is_region_box | xargs -n 1 sed -i '' 's/is_region_box/is_region_collider/g'
